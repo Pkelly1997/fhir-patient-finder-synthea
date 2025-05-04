@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Patient Finder</title>
+    <title>Methods 2025 Patient Finder</title>
 </head>
 <body>
     <div class=container>
-    <h1>Patient Finder</h1>
+    <h1>Methods 2025 Patient Finder</h1>
     <form method="post">
         <label for="number">Enter a patient ID:</label>
         <input type="text" name="number" id="number">
@@ -19,6 +19,8 @@
     <p>Last Name: {{ result.name[0].family }}</p>
     <p>Gender: {{ result.gender }}</p>
     <p>Birth Date: {{ result.birthDate}}</p>
+    <p>Ethnicity: {{ result.extension[1].extension[0].valueCoding.display }}</p>
+    <p>Race: {{ result.extension[0].extension[0].valueCoding.display }}</p>
     {% endif %}
     </div>
 </body>
